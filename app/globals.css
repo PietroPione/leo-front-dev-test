@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-alexandria);
+  --font-heading: var(--font-alexandria);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+  --blue-leo: #16355F;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +20,77 @@
   }
 }
 
+html {
+  @apply h-full w-full bg-white;
+  scroll-padding-top: 5rem;
+  font-size: 0.875rem;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: #101010;
+  background: inherit;
+  font-family: var(--font-sans);
+  @apply min-h-full selection:bg-[var(--blue-leo)] selection:text-white;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+}
+
+:root {
+  font-family: var(--font-alexandria), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-alexandria), serif;
+}
+
+@layer utilities {
+  .max-w-container {
+    max-width: 1280px;
+  }
+
+  .text-gray-light {
+    color: #54595F;
+  }
+
+  .bg-blue {
+    background-color: var(--blue-leo);
+  }
+
+  .text-blue {
+    color: var(--blue-leo);
+  }
+
+  .border-blue {
+    border-color: var(--blue-leo);
+  }
+  
+  .border-blue-leo {
+    border-bottom-color: var(--blue-leo);
+}
+
+  .selection\:bg-blue::selection {
+    background-color: var(--blue-leo);
+  }
+
+} 
+
+@utility container {
+  @apply mx-auto w-full px-4;
+  max-width: 90vw;
+  @variant md {}
+}
+
+@utility container-unset {
+  max-width: unset;
+  width: unset;
+  padding-inline: unset;
+  margin-inline: unset;
+  @variant md {}
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 90vw;
+  }
 }
