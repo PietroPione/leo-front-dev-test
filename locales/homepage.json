@@ -32,6 +32,16 @@
         "text_color": "text-[#855272]"
       }
     ],
-    "secondo_titolosezione": "Dentro ogni goccia di Lorem Ipsum, la formula della felicità"
+    "secondo_titolosezione": "Dentro ogni goccia di Lorem Ipsum, la formula della felicità",
+    "footer": {
+      "link":[
+        {"testo": "Privacy policy",
+      "link": "/"},
+      {"testo": "Cookie policy",
+    "link":"/"} 
+      ],
+      "copyright":"© 2025 Lorem Ipsum",
+      "piva":"P.IVA 12345678"
+    }
   }
 }

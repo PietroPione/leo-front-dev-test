@@ -1,6 +1,7 @@
 import { Alexandria} from "next/font/google";
 import "./globals.css";
 import HeaderServer from "@/components/HeaderServer";
+import Footer from "@/components/Footer";
 
 const alexandriaSans = Alexandria({
   variable: "--font-alexandria",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body>
         <HeaderServer />
         {children}
+        <Footer />
       </body>
     </html>
   );

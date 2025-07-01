@@ -22,7 +22,7 @@ export default function GenericCard({
 
     return (
         <div
-            className="rounded-3xl flex flex-row items-stretch lg:max-w-[45vw] min-h-[75vh]"
+            className="rounded-3xl flex flex-row items-stretch lg:max-w-[45vw] min-h-[60vh]"
             style={{ backgroundColor: bg_color }}
         >
             {/* Lato sinistro */}

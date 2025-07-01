@@ -79,9 +79,9 @@ export default function HeaderClient({ menuItems }) {
                                 );
                             })}
                         </ul>
-                        <LanguageSwitch />
                     </nav>
                 </div>
+                <LanguageSwitch />
                 <div className="md:hidden">
                     <ToggleMenu nav={menuItems} onToggle={handleToggleMenu} />
                 </div>
