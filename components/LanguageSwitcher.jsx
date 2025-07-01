@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { getSlugInLocale } from '@/lib/slugMap';
 
-export default function LanguageSwitch({ onLanguageChange }) {
+export default function LanguageSwitch({ onLanguageChange, isOpen }) {
     const router = useRouter();
     const pathname = usePathname();
     const params = useParams();
@@ -52,24 +52,31 @@ export default function LanguageSwitch({ onLanguageChange }) {
     };
 
     return (
-        <div className="flex space-x-2">
-            <ul className="flex space-x-2">
-                {locales.map((localeItem) => (
-                    <li key={localeItem.code}>
-                        <button
-                            className={`
-                                text-lg border rounded-lg flex items-center justify-center w-12 h-12 uppercase
-                                ${localeItem.code === currentLang ? 'bg-blue text-white cursor-default' : 'active:bg-blue hover:text-gray-800'}
+        <div className="flex">
+            <ul className="flex items-center space-x-0">
+                {
+                    locales.map((localeItem, idx) => (
+                        <li key={localeItem.code} className="flex items-center">
+                            <button
+                                className={`
+                                text-base flex items-center justify-center w-12 h-12 uppercase
+                                ${localeItem.code === currentLang
+                                        ? `${isOpen ? 'text-blue' : 'text-white'} underline cursor-default`
+                                        : `${isOpen ? 'text-blue' : 'text-white'} hover:text-gray-800`}
                             `}
-                            onClick={() => changeLanguage(localeItem.code)}
-                            disabled={localeItem.code === currentLang}
-                            aria-current={localeItem.code === currentLang ? 'page' : undefined}
-                        >
-                            {localeItem.code}
-                        </button>
-                    </li>
-                ))}
-            </ul>
-        </div>
+                                onClick={() => changeLanguage(localeItem.code)}
+                                disabled={localeItem.code === currentLang}
+                                aria-current={localeItem.code === currentLang ? 'page' : undefined}
+                            >
+                                {localeItem.code}
+                            </button>
+                            {idx < locales.length - 1 && (
+                                <span className="mx-1 text-gray-400 select-none">|</span>
+                            )}
+                        </li>
+                    ))
+                }
+            </ul >
+        </div >
     );
 }

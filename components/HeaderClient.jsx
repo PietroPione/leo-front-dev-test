@@ -2,18 +2,17 @@
 
 import { usePathname, useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import ToggleMenu from './ToggleMenu';
 import { useState } from 'react';
 import i18n from '@/lib/i18n';
 import LanguageSwitch from './LanguageSwitcher';
+import Logo from './Logo';
 
 
 
 const locales = [
     { code: 'it', name: 'Italiano' },
     { code: 'en', name: 'English' },
-    { code: 'fr', name: 'Français' },
 ];
 
 export default function HeaderClient({ menuItems }) {
@@ -27,7 +26,6 @@ export default function HeaderClient({ menuItems }) {
 
     const currentLang = params.locale || 'it';
 
-    const headerColor = ` ${reverse ? 'bg-green' : ''}`;
 
     const handleToggleMenu = (isOpen) => {
         setIsMenuOpen(isOpen);
@@ -52,19 +50,14 @@ export default function HeaderClient({ menuItems }) {
     };
 
     return (
-        <header className={headerColor}>
-            <div className="flex container justify-between items-center px-8 py-2">
-                <div className="z-40 " style={{ width: "100px" }}>
-                    <Link href={`/${currentLang}`}>
-                        <Image
-                            src="/LogoAlp.png"
-                            alt="PPM.Alpco SA Logo"
-                            width={82}    // 100 * 0.823 ≈ 82
-                            height={100}
-                            style={{ width: "100%", height: "auto" }}
-                            priority
-                        />
-                    </Link>
+        <header className='p-4 relative'>
+            <div className="flex container bg-blue rounded-3xl justify-between items-center text-white px-12 py-2">
+                <div className="z-40 ">
+                    <div className="h-12 md:h-16">
+                        <Link href={`/${currentLang}`}>
+                            <Logo color="white" />
+                        </Link>
+                    </div>
                 </div>
                 <div className="hidden md:block">
                     <nav className='flex flex-row items-center space-x-4 md:space-x-8'>
@@ -78,7 +71,7 @@ export default function HeaderClient({ menuItems }) {
                                     <li key={slugForLang}>
                                         <Link
                                             href={itemHref}
-                                            className={`uppercase hover:underline ${reverse ? 'text-white' : ''}`}
+                                            className="hover:underline text-white text-base"
                                         >
                                             {item.testo[currentLang]}
                                         </Link>
@@ -90,7 +83,7 @@ export default function HeaderClient({ menuItems }) {
                     </nav>
                 </div>
                 <div className="md:hidden">
-                    <ToggleMenu nav={menuItems} reverse={reverse} onToggle={handleToggleMenu} />
+                    <ToggleMenu nav={menuItems} onToggle={handleToggleMenu} />
                 </div>
             </div>
         </header>

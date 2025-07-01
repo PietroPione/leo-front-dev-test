@@ -57,30 +57,29 @@ export default function ToggleMenu({ nav = [], reverse, onToggle }) {
         };
     }, [isOpen, onToggle]);
 
-    const barColor = reverse ? 'text-white' : 'text-current';
 
     return (
         <>
             <div
                 ref={clickAreaRef}
-                className="absolute top-0 right-0 w-32 h-32 z-50 flex justify-center items-center"
+                className="absolute top-0 right-0 w-24 h-24 z-50 flex items-center justify-center"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <button
                     ref={buttonRef}
-                    className="focus:outline-none w-24 h-24"
+                    className="focus:outline-none w-16 h-16 flex items-center justify-center"
                     aria-label="Toggle Menu"
                     aria-expanded={isOpen}
                 >
-                    <div className="w-24 h-24 flex flex-col justify-center items-center gap-1">
+                    <div className="w-8 h-8 flex flex-col items-center justify-center gap-1">
                         <span
-                            className={`block w-6 h-1 rounded transition-all duration-300 ${isOpen ? 'bg-current translate-y-2 rotate-45 z-50' : `bg-current ${barColor}`}`}
+                            className={`block w-6 h-1 rounded transition-all duration-300 ${isOpen ? 'bg-current translate-y-2 rotate-45 z-50 text-blue' : `bg-current`}`}
                         ></span>
                         <span
-                            className={`block w-6 h-1 rounded transition-opacity duration-300 ${isOpen ? 'opacity-0' : `bg-current opacity-80 ${barColor}`}`}
+                            className={`block w-6 h-1 rounded transition-opacity duration-300 ${isOpen ? 'opacity-0' : `bg-current opacity-80`}`}
                         ></span>
                         <span
-                            className={`block w-6 h-1 rounded transition-all duration-300 ${isOpen ? 'bg-current -rotate-45 -translate-y-2 z-50' : `bg-current ${barColor}`}`}
+                            className={`block w-6 h-1 rounded transition-all duration-300 ${isOpen ? 'bg-current -rotate-45 -translate-y-2 z-50 text-blue' : `bg-current`}`}
                         ></span>
                     </div>
                 </button>
@@ -96,7 +95,7 @@ export default function ToggleMenu({ nav = [], reverse, onToggle }) {
                         let cleanSlug = slugForLang.replace(/^\//, '');
                         const itemHref = cleanSlug ? `/${locale}/${cleanSlug}` : `/${locale}`;
                         return (
-                            <li key={slugForLang} className="uppercase text-2xl ">
+                            <li key={slugForLang} className="uppercase text-2xl text-blue">
                                 <Link
                                     href={itemHref}
                                     onClick={() => setIsOpen(false)}
@@ -110,7 +109,7 @@ export default function ToggleMenu({ nav = [], reverse, onToggle }) {
                 </ul>
                 <div className='flex justify-center'>
 
-                    <LanguageSwitch onLanguageChange={() => setIsOpen(false)} />
+                    <LanguageSwitch isOpen={isOpen} onLanguageChange={() => setIsOpen(false)} />
                 </div>
             </div>
         </>

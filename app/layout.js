@@ -3,7 +3,7 @@ import "./globals.css";
 import HeaderServer from "@/components/HeaderServer";
 
 const alexandriaSans = Alexandria({
-  variable: "--font-alexandria-sans",
+  variable: "--font-alexandria",
   subsets: ["latin"],
 });
 
@@ -16,10 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="it">
-      <body
-        className={`${alexandriaSans.variable} antialiased`}
-      >
+    <html className={`${alexandriaSans.variable} antialiased`} lang="it">
+      <body>
         <HeaderServer />
         {children}
       </body>
