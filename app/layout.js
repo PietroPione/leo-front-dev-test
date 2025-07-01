@@ -1,5 +1,6 @@
 import { Alexandria} from "next/font/google";
 import "./globals.css";
+import HeaderServer from "@/components/HeaderServer";
 
 const alexandriaSans = Alexandria({
   variable: "--font-alexandria-sans",
@@ -15,10 +16,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="it">
       <body
         className={`${alexandriaSans.variable} antialiased`}
       >
+        <HeaderServer />
         {children}
       </body>
     </html>
