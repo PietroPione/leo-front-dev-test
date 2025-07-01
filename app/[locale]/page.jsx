@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import homepageIt from '@/locales/homepage.json';
 import homepageEn from '@/locales/homepage-en.json';
 import ScrittaGrande from '@/components/ScrittaGrande';
+import CardSection from '@/components/CardSection';
 
 const homepageDataMap = {
   it: homepageIt.homepage,
@@ -23,7 +24,9 @@ export default function Home() {
   return (
     <div className="text-blue min-h-screen space-y-28 ">
       <Hero data={heroData} />
-      <ScrittaGrande data={heroData} />
+      <ScrittaGrande data={heroData.primo_titolosezione} />
+      <CardSection data={heroData} />
+      <ScrittaGrande data={heroData.secondo_titolosezione} />
     </div>
   );
 }

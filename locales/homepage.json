@@ -3,9 +3,35 @@
     "hero_title": "LOREM",
     "hero_subtitle": "Lorem ipsum dolor sit amet",
     "hero_copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    "hero_button":{
-        "text": "Sopri lorem",
-        "link": "/"    },
-    "primo_titolosezione": "Scegli la variante più adatta al tuo amico a 4 zampe."
+    "hero_button": {
+      "text": "Sopri lorem",
+      "link": "/"
+    },
+    "primo_titolosezione": "Scegli la variante più adatta al tuo amico a 4 zampe.",
+    "cards": [
+      {
+        "bg_color": "#96D8ED",
+        "animale": "Per il gatto",
+        "nome_prodotto": "Lorem Urinary",
+        "risultato": "Protegge le sue vie urinarie.",
+        "testo_tasto": "Scopri perché funziona",
+        "link_tasto": "/",
+        "nome_forma": "BlueVector",
+        "nome_immagine": "gatto.png",
+        "text_color": "text-[#005E82]"
+      },
+      {
+        "bg_color": "#F5D6EA",
+        "animale": "Per il cane",
+        "nome_prodotto": "Lorem Gastro Intestinal",
+        "risultato": "Aiuta  la sua digestione.",
+        "testo_tasto": "Scopri perché funziona",
+        "link_tasto": "/",
+        "nome_forma": "PinkVector",
+        "nome_immagine": "cane.png",
+        "text_color": "text-[#855272]"
+      }
+    ],
+    "secondo_titolosezione": "Dentro ogni goccia di Lorem Ipsum, la formula della felicità"
   }
 }

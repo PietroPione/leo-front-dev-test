@@ -7,6 +7,33 @@
       "text": "Discover Lorem",
       "link": "/"
     },
-    "primo_titolosezione": "Choose the most suitable variant for your furry friend."
+    "primo_titolosezione": "Choose the most suitable variant for your furry friend.",
+    
+    "cards": [
+      {
+        "bg_color": "#96D8ED",
+        "animale": "Per il gatto",
+        "nome_prodotto": "Lorem Urinary",
+        "risultato": "Protegge le sue vie urinarie.",
+        "testo_tasto": "Scopri perché funziona",
+        "link_tasto": "/",
+        "nome_forma": "BlueVector",
+        "nome_immagine": "gatto.png",
+        "text_color": "#005E82"
+      },
+      {
+        "bg_color": "#F5D6EA",
+        "animale": "Per il cane",
+        "nome_prodotto": "Lorem Gastro Intestinal",
+        "risultato": "Aiuta  la sua digestione.",
+        "testo_tasto": "Scopri perché funziona",
+        "link_tasto": "/",
+        "nome_forma": "PinkVector",
+        "nome_immagine": "cane.png",
+        "text_color": "#855272"
+      }
+    ],
+    "secondo_titolosezione": "Dentro ogni goccia di Lorem Ipsum, la formula della felicità"
+  
   }
 }
