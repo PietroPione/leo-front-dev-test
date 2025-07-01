@@ -62,7 +62,7 @@ export default function LanguageSwitch({ onLanguageChange, isOpen }) {
                                 text-base flex items-center justify-center w-12 h-12 uppercase
                                 ${localeItem.code === currentLang
                                         ? `${isOpen ? 'text-blue' : 'text-white'} underline cursor-default`
-                                        : `${isOpen ? 'text-blue' : 'text-white'} hover:text-gray-800`}
+                                        : `${isOpen ? 'text-blue' : 'text-white'} hover:scale-110 transition duration-200`}
                             `}
                                 onClick={() => changeLanguage(localeItem.code)}
                                 disabled={localeItem.code === currentLang}
