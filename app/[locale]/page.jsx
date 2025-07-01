@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import Hero from "@/components/Hero";
 import homepageIt from '@/locales/homepage.json';
 import homepageEn from '@/locales/homepage-en.json';
+import ScrittaGrande from '@/components/ScrittaGrande';
 
 const homepageDataMap = {
   it: homepageIt.homepage,
@@ -20,8 +21,9 @@ export default function Home() {
   }
 
   return (
-    <div className="flex text-blue items-center justify-items-center min-h-screen gap-16 font-[family-name:var(--font-alexandria-sans)]">
+    <div className="text-blue min-h-screen space-y-28 ">
       <Hero data={heroData} />
+      <ScrittaGrande data={heroData} />
     </div>
   );
 }

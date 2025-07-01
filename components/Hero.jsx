@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Hero({ data }) {
     return (
-        <section className="flex justify-between w-full ">
-            <div className="flex-1 pl-[5vw] flex justify-center flex-col gap-4 md:gap-y-40">
+        <section className="flex justify-between w-full py-20">
+            <div className="flex-1 pl-[5vw] flex justify-center flex-col gap-4 md:gap-y-20">
                 <h1 className="text-9xl font-bold text-blue">{data.hero_title}</h1>
                 <div className="md:space-y-10 max-w-[50%]">
 

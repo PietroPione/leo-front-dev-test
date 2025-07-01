@@ -5,6 +5,7 @@
     "hero_copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "hero_button":{
         "text": "Sopri lorem",
-        "link": "/"    }
+        "link": "/"    },
+    "primo_titolosezione": "Scegli la variante più adatta al tuo amico a 4 zampe."
   }
 }
