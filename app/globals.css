@@ -9,6 +9,9 @@
   --background: #ffffff;
   --foreground: #171717;
   --blue-leo: #16355F;
+  --blue-light: #466A9C;
+  --celeste: #E0EEFF;
+  
 
   
 }
@@ -68,6 +71,17 @@ h1, h2, h3, h4, h5, h6 {
   .border-blue-leo {
     border-bottom-color: var(--blue-leo);
 }
+.border-blue-light {
+    border-bottom-color: var(--blue-light);
+}
+
+.bg-blue-light {
+    background-color: var(--blue-light);
+  }
+
+  .bg-celeste {
+    background-color: var(--celeste);
+  }
 
   .selection\:bg-blue::selection {
     background-color: var(--blue-leo);
