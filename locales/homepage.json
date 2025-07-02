@@ -33,19 +33,62 @@
       }
     ],
     "secondo_titolosezione": "Dentro ogni goccia di Lorem Ipsum, la formula della felicità",
+    "benefici": {
+      "background": "BeneficiBg",
+      "backgroundAcqua": "CiotolaAcqua.png",
+      "beneficioAcqua1": {
+        "icona": "NoGoccia",
+        "testo": "Nessun beneficio specifico "
+      },
+      "beneficioAcqua2": {
+        "icona": "NoTest",
+        "testo": "Non testata su cani e gatti"
+      },
+      "beneficioAcqua3": {
+        "icona": "Aroma",
+        "testo": "Nessun aroma"
+      },
+      "backgroundLorem": "CiotolaLorem.png",
+      "beneficioLorem1": {
+        "icona": "Goccia",
+        "testo": "Benefici specifici"
+      },
+      "beneficioLorem2": {
+        "icona": "Zampa",
+        "testo": "Specifica per cani e gatti"
+      },
+      "beneficioLorem3": {
+        "icona": "Cuore",
+        "testo": "Preferita all’acqua standard durante i test"
+      },
+      "beneficioLorem4": {
+        "icona": "Safe",
+        "testo": "Testata da veterinari"
+      },
+      "beneficioLorem5": {
+        "icona": "Smile",
+        "testo": "Aroma invitante"
+      }
+    },
     "accordion": {
       "title": "Dubbi, curiosità, domande?",
       "copy": "Qui trovi tutte le risposte su come, quando e perché scegliere Happy2O",
       "faq": [
-{"title":"Lorem Ipsum è sicura al 100% per gli animali?",
-"description":"Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."},
-{"title":"È testata da veterinari o laboratori indipendenti?",
-"description":"Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."},
-{"title":"Quanto grande è la bottiglia?",
-"description":"Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."}
+        {
+          "title": "Lorem Ipsum è sicura al 100% per gli animali?",
+          "description": "Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+        },
+        {
+          "title": "È testata da veterinari o laboratori indipendenti?",
+          "description": "Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+        },
+        {
+          "title": "Quanto grande è la bottiglia?",
+          "description": "Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+        }
       ],
-      "tasto":{
-        "testo_tasto":"Vedi tutte",
+      "tasto": {
+        "testo_tasto": "Vedi tutte",
         "link_tasto": "/"
       }
     },

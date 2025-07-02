@@ -27,7 +27,7 @@ export default function GenericCard({
         >
             {/* Lato sinistro */}
             <div className="w-1/2 flex flex-col items-start justify-between pr-6 pl-10">
-                {FormaComponent && <FormaComponent className="w-40 mb-6" />}
+                {FormaComponent && <FormaComponent className="w-40 xl:w-60 mb-6" />}
                 <div className={`flex flex-col space-y-2 w-full pb-10 ${cardTextColor}`}>
                     <div className="text-3xl font-bold leading-[110%]">
                         {risultato}

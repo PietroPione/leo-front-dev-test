@@ -8,7 +8,7 @@ export default function Accordion({ data }) {
 
     return (
         <section className="flex justify-between w-full py-20">
-            <div className="flex-1 pl-[5vw] flex justify-center flex-col gap-4 md:gap-y-7 ">
+            <div className="flex-1 pl-[5vw] flex justify-end flex-col gap-4 md:gap-y-7 ">
                 <h1 className="text-5xl leading-[120%] font-bold text-blue">{data.accordion.title}</h1>
                 <p className="text-lg text-gray-700">{data.accordion.copy}</p>
                 <div className="space-y-4 mt-8">
@@ -31,7 +31,7 @@ export default function Accordion({ data }) {
                     alt="Photo of happy dogs"
                     width={1200}
                     height={1200}
-                    className="object-cover"
+                    className="object-contain max-h-[90vh]"
                     priority
                 />
             </div>

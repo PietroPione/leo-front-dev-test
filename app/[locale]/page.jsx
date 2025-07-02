@@ -7,6 +7,7 @@ import homepageEn from '@/locales/homepage-en.json';
 import ScrittaGrande from '@/components/ScrittaGrande';
 import CardSection from '@/components/CardSection';
 import Accordion from '@/components/Accordion';
+import Benefici from '@/components/Benefici';
 
 const homepageDataMap = {
   it: homepageIt.homepage,
@@ -28,6 +29,7 @@ export default function Home() {
       <ScrittaGrande data={heroData.primo_titolosezione} />
       <CardSection data={heroData} />
       <ScrittaGrande data={heroData.secondo_titolosezione} />
+      <Benefici data={heroData.benefici} />
       <Accordion data={heroData} />
     </div>
   );
