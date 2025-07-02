@@ -62,7 +62,7 @@ export default function ToggleMenu({ nav = [], reverse, onToggle }) {
         <>
             <div
                 ref={clickAreaRef}
-                className="absolute top-0 right-0 w-24 h-24 z-50 flex items-center justify-center"
+                className="absolute top-0 right-0 w-24 h-24 md:h-30 md:w-30 z-50 flex items-center justify-center md:justify-start"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <button

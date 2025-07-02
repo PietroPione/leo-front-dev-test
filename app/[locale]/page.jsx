@@ -24,7 +24,7 @@ export default function Home() {
   }
 
   return (
-    <div className="text-blue min-h-screen space-y-14 md:space-y-28">
+    <div className="text-blue min-h-screen space-y-14 lg:space-y-28">
       <Hero data={heroData} />
       <ScrittaGrande data={heroData.primo_titolosezione} />
       <div

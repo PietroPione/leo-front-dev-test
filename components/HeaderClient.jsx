@@ -51,7 +51,7 @@ export default function HeaderClient({ menuItems }) {
 
     return (
         <header className='p-4 relative'>
-            <div className="flex container bg-blue rounded-3xl justify-between items-center text-white px-12 py-2">
+            <div className="flex container bg-blue rounded-3xl justify-between items-center text-white px-6 lg:px-12 py-2">
                 <div className="z-40 ">
                     <div className="h-12 md:h-16">
                         <Link href={`/${currentLang}`}>
@@ -59,7 +59,7 @@ export default function HeaderClient({ menuItems }) {
                         </Link>
                     </div>
                 </div>
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                     <nav className='flex flex-row items-center space-x-4 md:space-x-8'>
                         <ul className="flex space-x-4 md:space-x-8">
                             {menuItems.map((item) => {
@@ -82,7 +82,7 @@ export default function HeaderClient({ menuItems }) {
                     </nav>
                 </div>
                 <LanguageSwitch />
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <ToggleMenu nav={menuItems} onToggle={handleToggleMenu} />
                 </div>
             </div>
