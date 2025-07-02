@@ -4,6 +4,7 @@ import { useRouter, usePathname, useParams } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { getSlugInLocale } from '@/lib/slugMap';
+import { menuItems } from '@/components/menuItems'; // importa il tuo array menuItems
 
 export default function LanguageSwitch({ onLanguageChange, isOpen }) {
     const router = useRouter();
@@ -30,15 +31,20 @@ export default function LanguageSwitch({ onLanguageChange, isOpen }) {
 
         let newPathSegments;
         if (localeIndex !== -1) {
-
             newPathSegments = [...currentPathSegments];
             newPathSegments[localeIndex] = newLocale;
 
-
+            // Cerca lo slug corrente nei menuItems
             if (newPathSegments.length > localeIndex + 1) {
                 const currentSlug = newPathSegments[localeIndex + 1];
-                const translatedSlug = getSlugInLocale(currentSlug, currentLang, newLocale);
-                newPathSegments[localeIndex + 1] = translatedSlug;
+
+                // Trova la voce di menu corrispondente allo slug corrente e lingua corrente
+                const menuItem = menuItems.find(item => item.slug[currentLang] === '/' + currentSlug);
+
+                // Se esiste, prendi lo slug nella nuova lingua
+                if (menuItem && menuItem.slug[newLocale]) {
+                    newPathSegments[localeIndex + 1] = menuItem.slug[newLocale].replace(/^\//, '');
+                }
             }
         } else {
             newPathSegments = [newLocale, ...currentPathSegments];

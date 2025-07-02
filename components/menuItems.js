@@ -1,15 +1,15 @@
 export const menuItems = [
   {
     testo: { it: "Idratazione", en: "Hydration"},
-    slug: { it: "/", en: "/" },
+    slug: { it: "/idratazione", en: "/hydratation" },
   },
   {
     testo: { it: "Per il tuo cane", en: "For your Dog" },
-    slug: { it: "/cane", en: "/for-your-dog"}
+    slug: { it: "/cane", en: "/dog"}
   },
   {
     testo: { it: "Per il tuo gatto", en: "For your Cat" },
-    slug: { it: "/gatto", en: "/for-your-cat"}
+    slug: { it: "/gatto", en: "/cat"}
   },
   {
     testo: { it: "Domande frequenti", en: "FAQ" },

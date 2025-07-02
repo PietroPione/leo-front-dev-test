@@ -49,7 +49,9 @@ export default function Footer() {
                                 );
                             })}
                         </ul>
-                        <LogoInstagram className="w-12 h-12" />
+                        <a href="/" target="_blank">
+                            <LogoInstagram className="w-12 h-12 hover:scale-110 transform duration-200" />
+                        </a>
                     </nav>
                     <div className='space-y-6 '>
 
