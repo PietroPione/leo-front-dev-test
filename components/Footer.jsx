@@ -30,8 +30,8 @@ export default function Footer() {
 
                 </div>
                 <div>
-                    <nav className='flex flex-row items-center space-x-4 md:space-x-8'>
-                        <ul className="flex space-x-4 md:space-x-8">
+                    <nav className='flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 space-x-4 md:space-x-8'>
+                        <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 space-x-4 md:space-x-8">
                             {menuItems.map((item) => {
                                 const slugForLang = item.slug[currentLang] || '/';
                                 let cleanSlug = slugForLang.replace(/^\//, '');
@@ -56,7 +56,7 @@ export default function Footer() {
                     <div className='space-y-6 '>
 
                         <div>
-                            <ul className="flex space-x-4 mt-4 justify-center">
+                            <ul className="flex space-x-4 mt-4 md:justify-center">
                                 {footerLinks.map((link, idx) => (
                                     <li key={idx}>
                                         <Link

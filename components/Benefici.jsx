@@ -7,12 +7,16 @@ export default function Benefici({ data }) {
     return (
         <section className="container relative min-h-[75vh]">
             {BackgroundComponent && (
-                <div className="absolute inset-0 w-full h-full z-0 flex justify-center items-center pointer-events-none">
-                    <BackgroundComponent className="w-auto h-screen" />
+                <div className="absolute inset-0 w-full h-full z-0 flex justify-center items-center pointer-events-none ">
+                    <div className="hidden md:block">
+                        <BackgroundComponent className="w-auto h-screen " />
+                    </div>
                 </div>
             )}
-            <Acqua data={data} />
-            <Lorem data={data} />
+            <div className="space-y-10 md:space-y-0">
+                <Acqua data={data} />
+                <Lorem data={data} />
+            </div>
 
         </section>
     );

@@ -4,7 +4,7 @@ import GenericButton from './GenericButton';
 
 export default function GenericCard({
     bg_color,
-    text_color, // es: "text-blue-500"
+    text_color,
     animale,
     nome_prodotto,
     risultato,
@@ -17,19 +17,19 @@ export default function GenericCard({
         ? dynamic(() => import(`./${nome_forma}`), { ssr: false })
         : null;
 
-    // Salva la classe colore in una variabile
+
     const cardTextColor = text_color;
 
     return (
         <div
-            className="rounded-3xl flex flex-row items-stretch lg:max-w-[45vw] min-h-[60vh]"
+            className="rounded-3xl flex flex-row items-stretch max-w-[90vw] lg:max-w-[45vw] md:min-h-[60vh]"
             style={{ backgroundColor: bg_color }}
         >
             {/* Lato sinistro */}
-            <div className="w-1/2 flex flex-col items-start justify-between pr-6 pl-10">
-                {FormaComponent && <FormaComponent className="w-40 xl:w-60 mb-6" />}
-                <div className={`flex flex-col space-y-2 w-full pb-10 ${cardTextColor}`}>
-                    <div className="text-3xl font-bold leading-[110%]">
+            <div className="w-1/2 flex flex-col items-start justify-between py-4 md:py-0 pr-2 md:pr-6 pl-4 md:pl-10">
+                {FormaComponent && <FormaComponent className="w-28 lg:w-40 xl:w-60 mb-6" />}
+                <div className={`flex flex-col space-y-2 w-full pb-10 pl-4 ${cardTextColor}`}>
+                    <div className="text-xl md:text-3xl font-bold leading-[110%]">
                         {risultato}
                     </div>
                     <GenericButton
@@ -39,12 +39,12 @@ export default function GenericCard({
                 </div>
             </div>
             {/* Lato destro */}
-            <div className={`w-1/2 flex flex-col justify-between items-start pl-6 ${cardTextColor}`}>
+            <div className={`w-1/2 flex flex-col justify-between items-start pl-4 md:pl-6 ${cardTextColor}`}>
                 <div className="space-y-2 w-full pt-10 max-w-[50%]">
                     <div className="text-lg uppercase">
                         {animale}
                     </div>
-                    <div className="text-3xl font-bold leading-[110%]">
+                    <div className="text-xl md:text-3xl font-bold leading-[110%]">
                         {nome_prodotto}
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import GenericCard from './GenericCard';
 
 export default function CardSection({ data }) {
     return (
-        <section className="grid md:grid-cols-2 gap-40 container">
+        <section className="grid md:grid-cols-2 gap-10 md:gap-40 container">
             {data.cards && data.cards.map((card, idx) => (
                 <GenericCard
                     key={idx}
