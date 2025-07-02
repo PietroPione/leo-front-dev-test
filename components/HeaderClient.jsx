@@ -51,9 +51,9 @@ export default function HeaderClient({ menuItems }) {
 
     return (
         <header className='p-4 relative'>
-            <div className="flex container bg-blue rounded-3xl justify-between items-center text-white px-6 lg:px-12 py-2">
+            <div className="flex container bg-blue rounded-3xl justify-between items-center text-white px-4 lg:px-8 py-2">
                 <div className="z-40 ">
-                    <div className="h-12 md:h-16">
+                    <div className="h-auto w-24 lg:h-16 lg:w-auto">
                         <Link href={`/${currentLang}`}>
                             <Logo color="white" />
                         </Link>
