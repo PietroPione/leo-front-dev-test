@@ -40,7 +40,10 @@ export default function Home() {
 
           <ScrittaGrande data={heroData.secondo_titolosezione} />
         </div>
-        <Benefici data={heroData.benefici} className="mb-0" />
+        <div className="mb-6">
+
+          <Benefici data={heroData.benefici} />
+        </div>
         <Accordion data={heroData} />
       </div>
     </div>

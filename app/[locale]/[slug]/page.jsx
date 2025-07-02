@@ -1,7 +1,8 @@
 import { menuItems } from '@/components/menuItems';
 
-export default function MenuPage({ params }) {
-    const { locale, slug } = params;
+export default async function MenuPage(props) {
+    const { locale, slug } = await props.params;
+
     // Trova la voce di menu corrispondente allo slug e alla lingua
     const menuItem = menuItems.find(item => {
         const cleanSlug = (item.slug[locale] || '/').replace(/^\//, '');

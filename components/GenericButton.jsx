@@ -1,6 +1,13 @@
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
 export default function GenericButton({ bgColor, textColor, text, url, target }) {
+    const params = useParams();
+    const locale = params?.locale || 'it';
+
+    // Se l'url è "/" o vuoto, aggiungi il locale davanti
+    const localePath = url === '/' || url === '' ? `/${locale}` : url.startsWith('/') ? `/${locale}${url}` : url;
+
     const defaultBgColor = 'bg-blue';
     const defaultTextColor = 'text-white';
 
@@ -13,7 +20,7 @@ export default function GenericButton({ bgColor, textColor, text, url, target })
   `;
 
     return (
-        <Link href={url} passHref>
+        <Link href={localePath} passHref>
             <div
                 className={buttonClasses}
                 {...(target ? { target: "_blank", rel: "noopener noreferrer" } : {})}
