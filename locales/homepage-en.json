@@ -1,6 +1,6 @@
 {
   "homepage": {
-    "hero_title": "LOREM En",
+    "hero_title": "LOREM",
     "hero_subtitle": "Lorem ipsum dolor sit amet",
     "hero_copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "hero_button": {
@@ -8,32 +8,103 @@
       "link": "/"
     },
     "primo_titolosezione": "Choose the most suitable variant for your furry friend.",
-    
     "cards": [
       {
         "bg_color": "#96D8ED",
-        "animale": "Per il gatto",
+        "animale": "For cats",
         "nome_prodotto": "Lorem Urinary",
-        "risultato": "Protegge le sue vie urinarie.",
-        "testo_tasto": "Scopri perché funziona",
+        "risultato": "Protects its urinary tract.",
+        "testo_tasto": "Discover why it works",
         "link_tasto": "/",
         "nome_forma": "BlueVector",
         "nome_immagine": "gatto.png",
-        "text_color": "#005E82"
+        "text_color": "text-[#005E82]"
       },
       {
         "bg_color": "#F5D6EA",
-        "animale": "Per il cane",
+        "animale": "For dogs",
         "nome_prodotto": "Lorem Gastro Intestinal",
-        "risultato": "Aiuta  la sua digestione.",
-        "testo_tasto": "Scopri perché funziona",
+        "risultato": "Helps its digestion.",
+        "testo_tasto": "Discover why it works",
         "link_tasto": "/",
         "nome_forma": "PinkVector",
         "nome_immagine": "cane.png",
-        "text_color": "#855272"
+        "text_color": "text-[#855272]"
       }
     ],
-    "secondo_titolosezione": "Dentro ogni goccia di Lorem Ipsum, la formula della felicità"
-  
+    "secondo_titolosezione": "Inside every drop of Lorem Ipsum, the formula for happiness",
+    "benefici": {
+      "background": "BeneficiBg",
+      "backgroundAcqua": "CiotolaAcqua.png",
+      "beneficioAcqua1": {
+        "icona": "NoGoccia",
+        "testo": "No specific benefits"
+      },
+      "beneficioAcqua2": {
+        "icona": "NoTest",
+        "testo": "Not tested on dogs and cats"
+      },
+      "beneficioAcqua3": {
+        "icona": "Aroma",
+        "testo": "No aroma"
+      },
+      "backgroundLorem": "CiotolaLorem.png",
+      "beneficioLorem1": {
+        "icona": "Goccia",
+        "testo": "Specific benefits"
+      },
+      "beneficioLorem2": {
+        "icona": "Zampa",
+        "testo": "Specific for dogs and cats"
+      },
+      "beneficioLorem3": {
+        "icona": "Cuore",
+        "testo": "Preferred over standard water during tests"
+      },
+      "beneficioLorem4": {
+        "icona": "Safe",
+        "testo": "Veterinarian tested"
+      },
+      "beneficioLorem5": {
+        "icona": "Smile",
+        "testo": "Inviting aroma"
+      }
+    },
+    "accordion": {
+      "title": "Doubts, curiosities, questions?",
+      "copy": "Here you'll find all the answers on how, when, and why to choose Happy2O",
+      "faq": [
+        {
+          "title": "Is Lorem Ipsum 100% safe for animals?",
+          "description": "Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+        },
+        {
+          "title": "Is it tested by veterinarians or independent laboratories?",
+          "description": "Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+        },
+        {
+          "title": "How big is the bottle?",
+          "description": "Answer the frequently asked question in a simple sentence, a longish paragraph, or even in a list."
+        }
+      ],
+      "tasto": {
+        "testo_tasto": "View all",
+        "link_tasto": "/"
+      }
+    },
+    "footer": {
+      "link": [
+        {
+          "testo": "Privacy policy",
+          "link": "/"
+        },
+        {
+          "testo": "Cookie policy",
+          "link": "/"
+        }
+      ],
+      "copyright": "© 2025 Lorem Ipsum",
+      "piva": "VAT IT12345678"
+    }
   }
 }

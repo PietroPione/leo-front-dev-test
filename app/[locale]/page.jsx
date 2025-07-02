@@ -24,13 +24,25 @@ export default function Home() {
   }
 
   return (
-    <div className="text-blue min-h-screen space-y-28 ">
+    <div className="text-blue min-h-screen space-y-28">
       <Hero data={heroData} />
       <ScrittaGrande data={heroData.primo_titolosezione} />
-      <CardSection data={heroData} />
-      <ScrittaGrande data={heroData.secondo_titolosezione} />
-      <Benefici data={heroData.benefici} />
-      <Accordion data={heroData} />
+      <div
+        style={{
+          background: "linear-gradient(to bottom, #fff 0%, #E0EEFF 50%)"
+        }}
+      >
+        <div className="mb-28">
+
+          <CardSection data={heroData} />
+        </div>
+        <div className="mb-28">
+
+          <ScrittaGrande data={heroData.secondo_titolosezione} />
+        </div>
+        <Benefici data={heroData.benefici} className="mb-0" />
+        <Accordion data={heroData} />
+      </div>
     </div>
   );
 }

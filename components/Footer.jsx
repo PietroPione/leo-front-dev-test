@@ -24,7 +24,7 @@ export default function Footer() {
     const footerLinks = homepageIt.homepage.footer.link;
 
     return (
-        <footer className='p-4 relative'>
+        <footer className='p-4 relative bg-white'>
             <div className="flex container bg-blue rounded-3xl justify-center items-center text-white px-16 py-12">
                 <div className="z-40 ">
 
